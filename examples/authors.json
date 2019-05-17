@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "id": "12",
+      "type": "author",
+      "attributes": {
+        "first_name": "Fernand",
+        "last_name": "Contandin",
+        "alias": "Fernandel"
+      },
+      "relationships": {
+        "quotes": {
+          "data": [
+            {
+              "id": "51",
+              "type": "quote"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "1",
+      "type": "author",
+      "attributes": {
+        "first_name": "Claude",
+        "last_name": "Brasseur",
+        "alias": "Jacky Pic"
+      },
+      "relationships": {
+        "quotes": {
+          "data": [
+            {
+              "id": "1",
+              "type": "quote"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "meta": {
+    "count": 2,
+    "total_count": 2,
+    "total_pages": 1
+  },
+  "links": {
+    "self": "http://localhost:3000/authors",
+    "next": "http://localhost:3000",
+    "prev": "http://localhost:3000"
+  }
+}
