@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::API
   include Kaminari::Helpers::HelperMethods
   include IncludeParams
+  include SparseFieldsets
 
   def serialize_options(collection = [])
     {
