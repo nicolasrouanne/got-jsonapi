@@ -1,0 +1,26 @@
+{
+  "data": {
+    "id": "51",
+    "type": "quote",
+    "attributes": {
+      "title": "I ❤️ Pastis",
+      "content": "Le pastis, c'est comme les seins : un, c'est pas assez, et trois, c'est trop."
+    },
+    "relationships": {
+      "author": {
+        "data": {
+          "id": "12",
+          "type": "author"
+        }
+      }
+    }
+  },
+  "meta": {
+    "count": 1,
+    "total_count": 1,
+    "total_pages": 1
+  },
+  "links": {
+    "self": "http://localhost:3000/quotes/51"
+  }
+}
