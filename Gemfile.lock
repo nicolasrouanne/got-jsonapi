@@ -49,6 +49,9 @@ GEM
     byebug (11.0.1)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    debase (0.2.2)
+      debase-ruby_core_source (>= 0.10.2)
+    debase-ruby_core_source (0.10.4)
     erubi (1.8.0)
     fast_jsonapi (1.5)
       activesupport (>= 4.2)
@@ -151,6 +154,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
+  debase
   fast_jsonapi
   kaminari
   listen (>= 3.0.5, < 3.2)
