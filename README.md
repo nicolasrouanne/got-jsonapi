@@ -1,24 +1,23 @@
-# README
+# GOT JSON:API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An example {JSON:API} for **Game of Thrones** ⚔️ based on _Rails_ and [`fast_jsonapi`](https://github.com/Netflix/fast_jsonapi) by _Netflix_
 
-Things you may want to cover:
+## Usage
 
-* Ruby version
+Check out the project and run
 
-* System dependencies
+```bash
+$ rails db:setup # create database and seed it
+$ rails server # launch your API
+```
 
-* Configuration
+Query your api on `localhost:3000`, for instance `http://localhost:3000/houses` ☕️
 
-* Database creation
+## Routes & Models
 
-* Database initialization
+This demo is based on 2 models only:
 
-* How to run the test suite
+- Houses (e.g. _House Stark_ 🐺)
+- Characters (e.g. _Jon Snow_ ❄️)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+There is a 1..n relationship between _House_ and _Characters_.
