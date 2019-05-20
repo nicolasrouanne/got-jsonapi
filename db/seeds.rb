@@ -5,12 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-authors = Author.create([
-  { id: 1, first_name: 'Fernand', last_name: 'Contandin', alias: 'Fernandel' },
-  { id: 2, first_name: 'Claude', last_name: 'Brasseur', alias: 'Jacky Pic' }
+houses = House.create([
+  { id: 1, name: 'House Stark', region: 'The North', words: 'Winter is coming.', seat: 'Winterfell' },
+  { id: 2, name: 'House Lannister', region: 'The Westerlands', words: 'A Lannister always pays his debts.', seat: 'Casterly Rock' }
 ])
 
-Quote.create([
-  { author_id: 1, title: "I ❤️ Pastis", content: "Le pastis, c'est comme les seins : un, c'est pas assez, et trois, c'est trop." },
-  { author_id: 2, title: "Camping", content: "Pastis par temps bleu, pastis délicieux." }
+Character.create([
+  { house_id: 1, name: "Jon Snow", died: false },
+  { house_id: 1, name: "Arya Stark", died: false },
+  { house_id: 2, name: "Tyrion Lannister", died: false }
 ])
