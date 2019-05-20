@@ -10,27 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_16_153135) do
+ActiveRecord::Schema.define(version: 2019_05_20_085650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "authors", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "alias"
+  create_table "characters", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "house_id"
+    t.boolean "died"
+    t.index ["house_id"], name: "index_characters_on_house_id"
   end
 
-  create_table "quotes", force: :cascade do |t|
-    t.string "title"
-    t.string "content"
+  create_table "houses", force: :cascade do |t|
+    t.string "name"
+    t.string "region"
+    t.string "words"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "author_id"
-    t.index ["author_id"], name: "index_quotes_on_author_id"
+    t.string "seat"
   end
 
-  add_foreign_key "quotes", "authors"
+  add_foreign_key "characters", "houses"
 end
