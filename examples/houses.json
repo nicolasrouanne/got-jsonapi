@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "house",
+      "attributes": {
+        "name": "House Stark",
+        "region": "The North",
+        "words": "Winter is coming.",
+        "seat": "Winterfell"
+      },
+      "relationships": {
+        "characters": {
+          "data": [
+            {
+              "id": "1",
+              "type": "character"
+            },
+            {
+              "id": "2",
+              "type": "character"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "2",
+      "type": "house",
+      "attributes": {
+        "name": "House Lannister",
+        "region": "The Westerlands",
+        "words": "A Lannister always pays his debts.",
+        "seat": "Casterly Rock"
+      },
+      "relationships": {
+        "characters": {
+          "data": [
+            {
+              "id": "3",
+              "type": "character"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "meta": {
+    "count": 2,
+    "total_count": 2,
+    "total_pages": 1
+  },
+  "links": {
+    "self": "http://localhost:3000/houses",
+    "next": "http://localhost:3000",
+    "prev": "http://localhost:3000"
+  }
+}

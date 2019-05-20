@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "character",
+      "attributes": {
+        "name": "Jon Snow",
+        "died": false
+      },
+      "relationships": {
+        "house": {
+          "data": {
+            "id": "1",
+            "type": "house"
+          }
+        }
+      }
+    },
+    {
+      "id": "2",
+      "type": "character",
+      "attributes": {
+        "name": "Arya Stark",
+        "died": false
+      },
+      "relationships": {
+        "house": {
+          "data": {
+            "id": "1",
+            "type": "house"
+          }
+        }
+      }
+    },
+    {
+      "id": "3",
+      "type": "character",
+      "attributes": {
+        "name": "Tyrion Lannister",
+        "died": false
+      },
+      "relationships": {
+        "house": {
+          "data": {
+            "id": "2",
+            "type": "house"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "total_count": 3,
+    "total_pages": 1
+  },
+  "links": {
+    "self": "http://localhost:3000/characters",
+    "next": "http://localhost:3000",
+    "prev": "http://localhost:3000"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "data": {
+    "id": "1",
+    "type": "character",
+    "attributes": {
+      "name": "Jon Snow",
+      "died": false
+    },
+    "relationships": { "house": { "data": { "id": "1", "type": "house" } } }
+  },
+  "meta": {
+    "count": 1,
+    "total_count": 1,
+    "total_pages": 1
+  },
+  "links": {
+    "self": "http://localhost:3000/characters/1?include=house"
+  },
+  "included": [
+    {
+      "id": "1",
+      "type": "house",
+      "attributes": {
+        "name": "House Stark",
+        "region": "The North",
+        "words": "Winter is coming.",
+        "seat": "Winterfell"
+      },
+      "relationships": {
+        "characters": {
+          "data": [
+            { "id": "1", "type": "character" },
+            { "id": "2", "type": "character" }
+          ]
+        }
+      }
+    }
+  ]
+}
