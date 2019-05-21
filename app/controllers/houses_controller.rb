@@ -2,9 +2,9 @@ class HousesController < ApplicationController
   before_action :check_include_params
 
   def index
-    houses = House.all
-    options = {include: include}.merge(serialize_options(houses))
-    render json: HouseSerializer.new(houses, options).serialized_json
+    houses_paginated = House.all.page(params[:page]).per(params[:per])
+    options = {include: include}.merge(serialize_options(houses_paginated))
+    render json: HouseSerializer.new(houses_paginated, options).serialized_json
   end
 
   def show

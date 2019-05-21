@@ -2,9 +2,9 @@ class CharactersController < ApplicationController
   before_action :check_include_params
 
   def index
-    characters = Character.all
-    options = {include: include}.merge(serialize_options(characters))
-    render json: CharacterSerializer.new(characters, options).serialized_json
+    characters_paginated = Character.all.page(params[:page]).per(params[:per])
+    options = {include: include}.merge(serialize_options(characters_paginated))
+    render json: CharacterSerializer.new(characters_paginated, options).serialized_json
   end
 
   def show
