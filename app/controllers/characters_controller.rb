@@ -1,11 +1,19 @@
 class CharactersController < ApplicationController
+  before_action :check_include_params
+
   def index
     characters = Character.all
-    render json: CharacterSerializer.new(characters).serialized_json
+    options = {include: include}.merge(serialize_options(characters))
+    render json: CharacterSerializer.new(characters, options).serialized_json
   end
 
   def show
     @character = Character.find(params['id'])
-    render json: CharacterSerializer.new(@character).serialized_json
+    options = {include: include}.merge(serialize_options)
+    render json: CharacterSerializer.new(@character, options).serialized_json
+  end
+
+  def permitted_relationships
+    %i[house]
   end
 end
